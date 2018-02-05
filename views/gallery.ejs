@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>The Reagle Gallery</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="/assets/gallery.js"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="background">
+      <div id="gallery">
+        <% include partials/nav.ejs %>
+        <div id="add-image-button" class="noselect">Add picture</div>
+        <form id="add-image" enctype="multipart/form-data" action="/upload" method="POST" >
+          <input type="file" name="image" required />
+          <input type="text" name="description" placeholder="Describe the picture here"/>
+          <button type="submit">Confirm</button>
+        </form>
+
+        <% for(var i = 0; i < pics.length; i++) { %>
+          <div class="image" id="<%= pics[i]._id %>">
+            <img src="/assets/images/<%= pics[i].path %>" >
+            <p><%= pics[i].description %></p>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

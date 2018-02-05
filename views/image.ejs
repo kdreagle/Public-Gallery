@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>The Reagle Gallery</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="/assets/gallery.js"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="background">
+      <div id="gallery">
+        <% include partials/nav.ejs %>
+        <img src="/assets/images/<%= path %>">
+        <span contenteditable="true"><%= description %></span>
+        <form id="edit-description" enctype="multipart/form-data" action="/image" method="POST">
+          <!--input type="text" name="description" value="<%= description %>"/-->
+          <button type="submit">Edit Description</button>
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

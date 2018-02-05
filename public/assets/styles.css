@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+  font-family: 'Raleway', sans-serif;
+	font-size: 2em;
+	text-align: center;
+}
+
+#background {
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	position: fixed;
+	background: -webkit-linear-gradient(left top, white, #A4F8FF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, white, #A4F8FF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, white, #A4F8FF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, white, #A4F8FF);
+}
+
+#add-image-button {
+	cursor: pointer;
+}
+
+#add-image {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.image {
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+img {
+  max-height: 300px;
+}
+
+span {
+	display: block;
+	margin: 0 30% 0 30%;
+}
+
+input[type=text] {
+	margin: auto;
+	border: none;
+	background-color: transparent;
+	text-align: center;
+	font-size: 1.3em;
+	display: block;
+}
+
+button {
+	margin-top: 1em;
+	background-color: transparent;
+	font-size: 0.6em;
+	border: 0;
+	cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: black;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
